@@ -13,8 +13,9 @@ $(document).ready(function(){
   var liDrop = $(".li-drop");
   var rightNav = $(".nav.right");
   var mediaBurger = $(".media-burger");
-  var mediaNav = $(".media-nav");
+  var mediaNav = $(".cont-media-nav");
   var cross = $(".cross");
+  var mediaDrop = $(".media-drop")
   // nascondo i dropdown
 
   ulHide.hide();
@@ -23,9 +24,7 @@ $(document).ready(function(){
 
 liDrop.on({
   mouseover: function() {
-      // prima nascondili tutti
-      // poi come giustamente fai mostri quello in cui ti trovi
-    // $(".abs-ul").hide();
+
     liDrop.children("ul").hide();
     $(this).children("ul").show();
 
@@ -38,8 +37,7 @@ $(document).click(function(){
   liDrop.children("ul").hide();
 })
 
-// faccio apparire il menu-burger quando clicco nell'icona mediaBurger
-
+// faccio apparire il menu-burger quando clicco nell'icona mediaBurger e lo faccio sparire quando clicco sulla cross e quando esco dal suo  media-query
 
 
 mediaBurger.click(function(){
@@ -50,6 +48,14 @@ cross.click(function(){
   mediaNav.removeClass("mediaHide");
 })
 
+// faccio sparire e riapparire i drop nella media jquery
 
+mediaDrop.children("ul").hide();
+
+mediaDrop.on({
+  click: function(){
+    $(this).children("ul").slideToggle();
+  }
+})
 
 });
