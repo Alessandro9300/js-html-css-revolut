@@ -54,6 +54,7 @@ mediaDrop.children("ul").hide();
 
 mediaDrop.on({
   click: function(){
+    mediaDrop.children("ul").hide();
     $(this).children("ul").slideToggle();
   }
 })
