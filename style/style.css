@@ -60,7 +60,7 @@ a{
   text-decoration: none;
 }
 
-.li-drop:hover, li a:hover, .cross:hover{
+li:hover, a:hover, .cross:hover, .media-burger:hover{
   cursor: pointer;
   color: black;
 }
@@ -148,10 +148,20 @@ button a{
 
 }
 
+
 .mediaHide{
   display: none;
 }
 
+.media-drop a {
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.bot-media{
+  display:flex;
+  justify-content: center;
+}
 
 
 @media all and (max-width: 1200px){
